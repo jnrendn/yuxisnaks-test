@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
+import { AddproductService } from 'app/addproduct.service';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -9,7 +11,13 @@ import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'a
 export class ProductComponent implements OnInit {
   products: FirebaseListObservable<any[]>;
 
-  constructor(public angularFire: AngularFire) {}
+  constructor(public angularFire: AngularFire, 
+              public addproductService: AddproductService
+              ) { 
+                this.addedProducts = addproductService.product_added;
+            }
+
+  addedProducts: string;
 
   ngOnInit() {
     this.products = this.getProducts();
@@ -20,7 +28,7 @@ export class ProductComponent implements OnInit {
   }
 
   addProductToCart(key: any): void {
-    alert(key);
+    this.addproductService.product_added(key);
   }
 
 }
