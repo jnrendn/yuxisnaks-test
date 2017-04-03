@@ -1,9 +1,10 @@
 export const firebaseConfig = {
     
-    apiKey: "AIzaSyDimARngHsmKyA040g-UIbOU0WsOgXMf3I",
-    authDomain: "yuxi-snacks.firebaseapp.com",
-    databaseURL: "https://yuxi-snacks.firebaseio.com",
-    storageBucket: "yuxi-snacks.appspot.com",
-    messagingSenderId: "167796140530"
+    apiKey: "AIzaSyDEuEmtahVDtjkk7Mz4zQ8jAjkFB0qmDeY",
+    authDomain: "yuxi-snacks-85cff.firebaseapp.com",
+    databaseURL: "https://yuxi-snacks-85cff.firebaseio.com",
+    projectId: "yuxi-snacks-85cff",
+    storageBucket: "yuxi-snacks-85cff.appspot.com",
+    messagingSenderId: "820009234156"
 
 }

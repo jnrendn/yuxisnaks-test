@@ -15,3 +15,15 @@
     width: 50px;
     border-radius: 20%;
 }
+
+.span_unlist_prod {
+    width: 15px; 
+    height: 15px; 
+    fill: red; 
+    float: right; 
+    margin-top: 18px;
+}
+
+.span_unlist_prod:hover {
+    cursor: pointer;
+}

@@ -54,6 +54,12 @@ a:hover {
 	color: #fff;
 }
 
+button{
+	margin-top: 7px;
+	margin-right: 5px;
+	float: right;
+}
+
 /*-----------------------------------
 	Breadcrumb 
 -----------------------------------*/
@@ -84,6 +90,7 @@ a:hover {
 	height: 100px;
 	margin-bottom: 10px;
 	padding-top: 32px;
+	margin-top: 40px;
 }
 
 /*----------------------------------- 
@@ -92,6 +99,10 @@ a:hover {
 
 .container.text-center{
 	padding: 0 32px;
+}
+
+.container.product {
+	margin-top:30px;
 }
 
 /*-----------------------------------  
@@ -103,7 +114,7 @@ a:hover {
 	padding: 0;
 }
 
-.col-md-5.col-sm-12 h1{
+.col-md-9.col-sm-12 h1{
 	color: #595c5f;
 	font-size: 24px;
 	font-weight: bold;
@@ -111,7 +122,7 @@ a:hover {
 	text-align: left;
 }
 
-.col-md-5.col-sm-12 p{
+.col-md-9.col-sm-12 p{
 	color: #898e92;
 	line-height: 1.5;
 	max-width: 400px;

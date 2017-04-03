@@ -10,6 +10,7 @@ import { AddproductService } from 'app/addproduct.service';
 })
 export class ProductComponent implements OnInit {
   products: FirebaseListObservable<any[]>;
+  product_selected: any;
 
 
   constructor(public angularFire: AngularFire,
@@ -27,7 +28,8 @@ export class ProductComponent implements OnInit {
   addProductToCart(key: any): void {
     // this.addproductServiceProd.product_added(key);
     // alert(key);
-    this.products.forEach( item => console.log(item[key - 1] ));
+    this.products.forEach( item => this.product_selected = item[key - 1]);
+    this.addproductServiceProd.addProduct(this.product_selected);
 
   }
 
