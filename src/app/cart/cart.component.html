@@ -6,7 +6,7 @@
 </div>
 
 <h1>Your shopping cart</h1>
-<h3>{{product}}</h3>
+<h3>{{addproductService.product_added}}</h3>
 
 <!--<div class="text-left">
   <ul>
@@ -70,9 +70,7 @@
 
 </div>
 
-
-
-<button style="float: left; background-color: orangered; border: 1px; 
+<button style="float: left; background-color: orangered; border: 1px;
         color: #fff; padding-left: 12px; padding-right: 12px; padding-top: 3px; padding-bottom: 5px; border-radius: 3px;">Buy</button>
 
-<input type="text" ([ngModel])="product">
+<input type="text" #test (keyup.enter)="addtocart(test.value)">

@@ -7,9 +7,10 @@ import { AddproductService } from 'app/addproduct.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  product: any;
-  constructor(public addproductService: AddproductService) { 
-    this.product = addproductService.product_added;
+  constructor(public addproductService: AddproductService) {}
+
+  addtocart(e: any){
+  this.addproductService.addProduct(e);
   }
 
   ngOnInit() {
