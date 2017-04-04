@@ -1,7 +1,9 @@
 <nav class="navbar navbar-fixed-top">
   <div class="container col-lg-12 col-md-12 col-xs-12">
     <span class="navbar-brand hidden-xs">
-       <img style="height: 35px" src="http://www.gloria.ie/wp-content/themes/gloria2011/images/gloria-logo.png"/>
+      <a href="/">
+        <img style="height: 35px" src="http://www.gloria.ie/wp-content/themes/gloria2011/images/gloria-logo.png"/>
+      </a> 
     </span>
     <div class="dropdown">
       <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -9,9 +11,10 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-        <li><a href="#">Iniciar Sesión</a></li>
-        <li><a routerLink="/reg">Registrarse</a></li>
+        <li *ngIf="hide"><a routerLink="/login">Log In</a></li>
+        <li *ngIf="hide"><a routerLink="/reg">Sign In</a></li>
         <li role="separator" class="divider"></li>
+        <li *ngIf="!hide"><a (click)="logout()">Log Out</a></li>
       </ul>
     </div>
     <div class="navbar-right col-lg-2 col-md-2 col-xs-2">
@@ -26,9 +29,9 @@
 
 <div class="container-fluid breadcrumbBox text-center">
   <ol class="breadcrumb">
-    <li><a routerLink="/user" >Perfil</a></li>
-    <li><a routerLink="/product" >Productos</a></li>
-    <li><a>Historial de compras</a></li>
+    <li><a routerLink="/user" *ngIf="!hide">Profile</a></li>
+    <li><a routerLink="/product" >Products</a></li>
+    <li><a *ngIf="!hide">Shopping history</a></li>
   </ol>
 </div>
 
